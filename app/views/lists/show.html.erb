@@ -1,0 +1,11 @@
+<h1>Show</h1>
+
+<h2><%= @list.name %></h2>
+
+<%= @list.bookmarks.each do |bookmark| %>
+  <p><%= bookmark.movie.title %><p>
+  <p><%= bookmark.comment %><p>
+  <% end %>
+
+<%= link_to "Back to list", lists_path %>
+<%= link_to "add movie", new_bookmark_path %>
